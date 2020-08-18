@@ -1,32 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-var name="binod"
-const img1="https://picsum.photos/200/300" 
-const img2="https://picsum.photos/210/300" 
-const img3="https://picsum.photos/220/300" 
-const links="https://picsum.photos"
+let curDate=new Date(2020,5,5,13)
+curDate=curDate.getHours()
+let greeting='';
+const cssStyle={ };
 
-const heading={
-  color:'#fa9191',
-  textAlign: 'center',
-  textTransform: 'capitalize',
-  fontWeight: 'bold',
-  textShadow: '0px 2px 4px #ffe9c5',
-  margin: '50px 0',
-  fontFamily: "'Josefin Sans', sans-serif"
+if (curDate>=1 && curDate<12){
+  greeting='Good Morning';
+  cssStyle.color='Green';
 }
+else if(curDate>=12 && curDate<19){
+  greeting='Good Afternoon';
+  cssStyle.color='Orange'
+}
+else{
+  greeting='Good Night'
+  cssStyle.color='Blue'
+}
+
+
+
 ReactDOM.render(
-  <React.Fragment>
-    <h1 style={heading }> Hello, My name is {name} </h1>
-    <div className="img_div">
-      <img src={img1} alt="randomimage" />
-      <img src={img2} alt="randomimage" />
-      <a href={links} target="_">
-        <img src={img3} alt="randomimage" />
-      </a>
-    </div>
-    </React.Fragment>,
-    document.getElementById('root')
-    );
+  <div className="challenge">
+    <h1 className="heading">Hello Sir, <span style={cssStyle}>{greeting}</span></h1>
+  </div>,
+  document.getElementById('root')
+);
