@@ -1,10 +1,15 @@
-import React from 'react'
-import ReactDom from 'react-dom'
-import App from './App'
-import './index.css'
-ReactDom.render(
+import React from 'react';
+import ReactDOM from 'react-dom';
+import myfav ,{favprog,myName,myNames} from './App'
+ReactDOM.render(
   <React.Fragment>
-  <App/>
+    <ol>
+      <li>{myfav}</li>
+      <li>{favprog}</li>
+      <li>{myName()}</li>
+      <li>{myNames()}</li>
+    </ol>
+
   </React.Fragment>,
   document.getElementById('root')
-);
+)
