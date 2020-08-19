@@ -1,15 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import myfav ,{favprog,myName,myNames} from './App'
+import App from './App'
 ReactDOM.render(
-  <React.Fragment>
-    <ol>
-      <li>{myfav}</li>
-      <li>{favprog}</li>
-      <li>{myName()}</li>
-      <li>{myNames()}</li>
-    </ol>
-
-  </React.Fragment>,
+  <App/>,
   document.getElementById('root')
 )
