@@ -1,18 +1,25 @@
 import React from 'react';
-import {add,sub,div,mult} from './Calculator'
+import Amazon from './Amazon'
+import './index.css'
+import Netflix from './Netflix';
 
-function App(){
-    return(
-        <React.Fragment>
-    <ol>
-      <li>Sum of two no is{add(40,4)}</li>
-      <li>Sub of two no is{sub(30,4)}</li>
-      <li>Div of two no is{div(40,3)}</li>
-      <li>Mult of two no is{mult(40,4)}</li>
-     
-    </ol>
-  </React.Fragment>
-    )
+const favSeries='amazon'
+const Favs=()=>{
+if (favSeries==='netflix'){
+    return (<Netflix/>)
 }
-export default App;
+else{
+  return(<Amazon/>)
+}
+}
 
+const App=()=>{
+  return(
+    <React.Fragment>
+    <h1 className="heading_style">List of top 5 Netflix series in 2020</h1>
+    <Favs/>
+  </React.Fragment>
+  )
+}
+
+export default App;
