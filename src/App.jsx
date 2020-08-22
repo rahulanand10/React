@@ -1,21 +1,18 @@
 import React,{useState} from 'react';
 
 
-
-
-
 const App=()=>{
-  // const state=useState()
+  let curr=new Date().toLocaleTimeString()
+  const [date,settime]=useState(curr);
 
-  const [count,setCount]=useState(0);
-
-  const IncNum=()=>{
-    setCount(count +1);
+  const setTime=()=>{
+    let cur=new Date().toLocaleTimeString()
+    settime(cur);
 }
   return(
     <React.Fragment>
-      <h1>{count}</h1>
-      <button onClick={IncNum}> Click Me</button>
+      <h1 style={{fontSize:'40px',fontWeight:'bold'}}>{date}</h1>
+      <button onClick={setTime}> Get Time</button>
     </React.Fragment>
   )
 };
