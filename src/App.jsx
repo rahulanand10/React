@@ -1,22 +1,25 @@
 import React,{useState} from 'react';
 
-
-
 const App=()=>{
-  const [bg,setBg]=useState('purple')
-  const[name,setName]=useState('Click me');
-  const bgChange=()=>{
-    setBg('#34495e')
-    setName('OUCH!! 😢')
+
+
+  const [name,setName]=useState();
+  const [fullName,setFullName]=useState()
+
+  const InputEvent=(event)=>{
+    // console.log(event.target.value)
+    setName(event.target.value)
   }
-  const dbChange=()=>{
-    setBg('purple')
-    setName('Ayyo !! 😠')
+  const onSubmit=()=>{
+    setFullName(name)
   }
   return(
     <React.Fragment>
-      <div style={{backgroundColor:bg }}>
-        <button onClick={bgChange} onDoubleClick={dbChange}> {name} </button>
+      <div>
+       <h1>Hello {fullName}</h1> 
+       <input type='text' placeholder="Enter Your Name"
+       onChange={InputEvent} value={name}/>
+       <button onClick={onSubmit}>Click me</button>
       </div>
     </React.Fragment>
   )
