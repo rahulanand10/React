@@ -30,28 +30,18 @@
 } 
 .center_div{
   width: 25%;
-  height: 80vh;
+  height: 60vh;
+  padding-top: 20%;
+  justify-content: center;
   background-color: #f4f4f4;
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
 }
-input{
-  text-align: center;
-  height: 30px;
-  top: 10px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  font-weight: bold;
-  width: 60%;
-  border-bottom: 2px solid #8566aa;
-  color:  #8566aa;
-  outline: none;
-}
+
 button{
-  min-height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  min-height: 40;
+  width: 40%;
+  /* border-radius: 50%; */
   border-color: transparent;
   background-color: #8566aa;
   color: #fff;
