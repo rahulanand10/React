@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css'
-import ComA from './ComA';
-
+import App from './App';
+import {BrowserRouter} from "react-router-dom"
 
 
 ReactDOM.render(
-  <ComA/>,
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
   document.getElementById('root')
 )

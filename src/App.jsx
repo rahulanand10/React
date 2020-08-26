@@ -1,18 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import {Route,Switch} from 'react-router-dom'
+import About from './About'
+import Home from './Home'
+import Contact from './Contact'
+import Error from './Error'
 
 const App=()=>{
-  const [num,setNum]=useState(0)
-
-  useEffect(()=>{
-    document.title=`You clicked me ${num} times`
-  },[num])
-
-  const Increment=()=>{
-    setNum(num+1);
+  const Name=()=>{
+    return <h1>Name Page</h1>
   }
   return(
     <React.Fragment>
-      <button onClick={Increment}><h1>Click me {num}</h1></button>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/about' component={About}/>
+        <Route exact path='/contact' component={Contact}/>
+        <Route exact path='/contact/name' component={Name}/>
+        <Route component={Error}/>
+
+      </Switch>
     </React.Fragment>
   )
 }
