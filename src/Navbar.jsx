@@ -8,6 +8,7 @@ const Navbar=()=>{
                 <NavLink exact activeClassName="active_class" className="link" to='/contact'>Contact Us</NavLink>
                 <NavLink exact activeClassName="active_class" className="link" to='/about'>AboutUs</NavLink>
                 <NavLink activeClassName="active_class" className="link" to='/user'>User</NavLink>
+                <NavLink activeClassName="active_class" className="link" to='/search'>Search</NavLink>
             </div>
         </React.Fragment>
     )
