@@ -3,13 +3,11 @@ import {NavLink} from 'react-router-dom'
 const Navbar=()=>{
     return(
         <React.Fragment>
-            <NavLink exact activeClassName="active_class" to='/'>Home</NavLink>
-            <NavLink exact activeClassName="active_class" to='/contact'>Contact Us</NavLink>
-            <NavLink exact activeClassName="active_class" to='/about'>AboutUs</NavLink>
-            <br/>
-            <a href="/">Home</a>
-            <a href="/about">AboutUs</a>
-            <a href="/contact">Contact</a>
+            <div className="nav">
+                <NavLink exact activeClassName="active_class" className="link" to='/'>Home</NavLink>
+                <NavLink exact activeClassName="active_class link" className="link" to='/contact'>Contact Us</NavLink>
+                <NavLink exact activeClassName="active_class link" className="link" to='/about'>AboutUs</NavLink>
+            </div>
         </React.Fragment>
     )
 

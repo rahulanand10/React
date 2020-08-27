@@ -1,7 +1,7 @@
 import React from 'react'
 
-const About=()=>{
-  return <h1>hello, this is about page</h1>
+const About=(props)=>{
+  return <h1>hello, this is {props.name} page</h1>
 }
 
 export default About;
