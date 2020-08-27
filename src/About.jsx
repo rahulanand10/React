@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About=()=>{
-  return <h1>Thello, this is about page</h1>
+  return <h1>hello, this is about page</h1>
 }
 
 export default About;

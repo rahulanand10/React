@@ -76,3 +76,7 @@ h1{
     width: 50%;
   }
 }
+a.active_class{
+  color: violet;
+  border-bottom: 1px solid red;
+}
